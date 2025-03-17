@@ -1,0 +1,12 @@
+{
+  "docs/main.js": "http://localhost:8080/docs/main.js",
+  "docs/runtime.js": "http://localhost:8080/docs/runtime.js",
+  "docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-85c059.css": "http://localhost:8080/docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-85c059.css",
+  "docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-85c059.js": "http://localhost:8080/docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-85c059.js",
+  "docs/fonts/bootstrap-icons.woff?": "http://localhost:8080/docs/fonts/bootstrap-icons.39795c0b.woff",
+  "docs/fonts/bootstrap-icons.woff2?": "http://localhost:8080/docs/fonts/bootstrap-icons.b7bcc075.woff2",
+  "docs/main.css": "http://localhost:8080/docs/main.css",
+  "docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-db2fe6.css": "http://localhost:8080/docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-db2fe6.css",
+  "docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-db2fe6.js": "http://localhost:8080/docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-db2fe6.js",
+  "docs/fonts/Comfortaa-VariableFont_wght.ttf": "http://localhost:8080/docs/fonts/Comfortaa-VariableFont_wght.7b8c9529.ttf"
+}

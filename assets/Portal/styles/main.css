@@ -1,0 +1,41 @@
+/*Styles*/
+.main-content-flex,
+.main-content {
+    display: flex;
+    min-height: 50vh;
+    margin-top: 1em;
+    gap: 1em;
+}
+.main-content{
+    flex-direction: column;
+    gap: 0em;
+}
+.tab-content{
+    border: 1px solid #dee2e6;
+    background-color: var(--light);
+    padding: 1em;
+    min-height: 80vh;
+}
+
+.subOptions{
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0px;
+    border: 1px solid #dee2e6;
+}
+.subOptions a{
+    display: flex;
+    gap: 1em;
+}
+.subOptions a.active{
+    background-color: var(--iv-color2);
+    border-color: var(--iv-color2);
+}
+
+@media (min-width: 640px) {
+}
+@media (max-width: 800px) {
+    .main-content-flex{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "entrypoints": {
+    "main": {
+      "js": [
+        "http://localhost:8080/docs/runtime.js",
+        "http://localhost:8080/docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-db2fe6.js",
+        "http://localhost:8080/docs/main.js"
+      ],
+      "css": [
+        "http://localhost:8080/docs/vendors-node_modules_bootstrap_dist_js_bootstrap_bundle_js-node_modules_bootstrap_dist_js_boo-db2fe6.css",
+        "http://localhost:8080/docs/main.css"
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+	"Clientes": {
+		"type": "submenu",
+		"icon": "bi bi-house-fill",
+		"contract": true,
+		"data": {
+            "Pedidos": {
+				"type": "program",
+				"icon": "",
+				"data": "/pedidos/control"
+			}
+        }
+    },
+    "Configuraciones": {
+		"type": "submenu",
+		"icon": "bi bi-house-fill",
+		"contract": true,
+		"data": {
+            
+        }
+    }
+}

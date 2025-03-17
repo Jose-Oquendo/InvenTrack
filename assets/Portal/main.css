@@ -1,0 +1,7 @@
+@import url("./resources/fonts/Conforta.css");
+
+@import url('./styles/general.css');
+@import url('./styles/nav.css');
+@import url('./styles/main.css');
+
+@import url('normalize.css/normalize.css');

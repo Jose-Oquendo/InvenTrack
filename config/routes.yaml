@@ -1,0 +1,30 @@
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+Utils:
+    resource: ../src/Utils/ 
+    type: annotation
+
+controllers:
+    resource: ../src/Controller/ 
+    type: annotation
+
+#------------------------------------
+
+#------------------------------------
+
+# config/routes.yaml
+api_login_check:
+    path: /api/login_check
+
+# config/routes.yaml
+app_auth_access:
+    path: /api/login
+    methods: ['POST']
+
+path: 
+    path: /{path<.*>}
+    controller: App\Controller\AppController::noPatch
+
+    

@@ -54,12 +54,16 @@
     </nav>
 </template>
 <script setup>
-    import { ref } from 'vue';
+    import { ref, onMounted } from 'vue';
     import { useStore } from '../store/index';
     import { useLoginStore } from '../store/controllers/Login';
 
     const store = useStore();
     const login = useLoginStore();
+
+    onMounted(() => {
+        login.chargePage();
+    })
 
     const close_menu = () => {
         store.menu = false

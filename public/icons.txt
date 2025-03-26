@@ -1,0 +1,8 @@
+cambiar
+
+manifest.json
+"fonts/bootstrap-icons.woff?": "build/fonts/bootstrap-icons.39795c0b.woff",
+"fonts/bootstrap-icons.woff2?": "build/fonts/bootstrap-icons.b7bcc075.woff2"
+
+Archivo de CSS con rutas assets
+font-family:bootstrap-icons;src:url("fonts/bootstrap-icons.b7bcc075.woff2") format("woff2"),url("fonts/bootstrap-icons.39795c0b.woff") format("woff")}

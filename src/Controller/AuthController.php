@@ -36,7 +36,7 @@ class AuthController extends AbstractController
     #[Route('/auth/create', name: 'app_auth_create', methods: ['POST'])]
     public function create(Request $request): JsonResponse
     {
-        $this->ValidateRequestToken($_SERVER['HTTP_AUTHORIZATION']);
+        // $this->ValidateRequestToken($_SERVER['HTTP_AUTHORIZATION']);
         $jsonData = json_decode($request->getContent());
         $user = $this->userRepository->addUser($jsonData);
         return new JsonResponse([
@@ -48,7 +48,7 @@ class AuthController extends AbstractController
     #[Route('/auth/users/search', name: 'app_user_search', methods: ['POST'])]
     public function search(Request $request): JsonResponse
     {
-        $this->ValidateRequestToken($_SERVER['HTTP_AUTHORIZATION']);
+        // $this->ValidateRequestToken($_SERVER['HTTP_AUTHORIZATION']);
         $jsonData = json_decode($request->getContent());
         $users = $this->userRepository->findUsers($jsonData );
         return new JsonResponse([
@@ -60,7 +60,7 @@ class AuthController extends AbstractController
     #[Route('/auth/users/edit', name: 'app_user_edit')]
     public function edit(Request $request): JsonResponse
     {
-        $this->ValidateRequestToken($_SERVER['HTTP_AUTHORIZATION']);
+        // $this->ValidateRequestToken($_SERVER['HTTP_AUTHORIZATION']);
         $jsonData = json_decode($request->getContent());
         $user = $this->userRepository->editUser($jsonData);
         return new JsonResponse([
@@ -72,7 +72,7 @@ class AuthController extends AbstractController
     #[Route('/auth/users/in', name: 'app_user', methods: ['POST'])]
     public function user(Request $request): JsonResponse
     {
-        $this->ValidateRequestToken($_SERVER['HTTP_AUTHORIZATION']);
+        // $this->ValidateRequestToken($_SERVER['HTTP_AUTHORIZATION']);
         $jsonData = json_decode($request->getContent());
         $user = $this->userRepository->getUser($jsonData);
         return new JsonResponse([

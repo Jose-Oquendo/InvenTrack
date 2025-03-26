@@ -4,107 +4,16 @@
 		"icon": "bi bi-house-fill",
 		"contract": false,
 		"data": {
-			"Informe Gerencial": {
-				"type": "program",
-				"icon": "bi bi-bar-chart-line",
-				"data": "/adm/gerencial"
-			},
-			"Informes": {
-				"type": "program",
-				"icon": "bi bi-file-earmark-ruled",
-				"data": "/adm/informes"
-			},
-			"Balance Contable": {
-				"type": "program",
-				"icon": "bi bi-pie-chart",
-				"data": "/adm/balances"
-			},
-			"Informe ventas": {
-				"type": "program",
-				"icon": "bi bi-easel2",
-				"data": "/adm/ventas"
-			},
-			"Caja": {
-				"type": "program",
-				"icon": "bi bi-wallet2",
-				"data": "/adm/caja"
-			}
-        }
-    },
-	"Inventarios": {
-		"type": "submenu",
-		"icon": "bi bi-boxes",
-		"contract": false,
-		"data": {
-            "Modulo Inventarios": {
-				"type": "program",
-				"icon": "bi  bi-box-seam",
-				"data": "/inv/inventario"
-			},
-			"Informe Entradas y salidas": {
-				"type": "program",
-				"icon": "bi bi-truck",
-				"data": "/home"
-			}
-        }
-    },
-	"Recursos Humanos": {
-		"type": "submenu",
-		"icon": "bi bi-person-arms-up",
-		"contract": false,
-		"data": {
-            "Modulo Personas": {
+			"Modulo Personas": {
 				"type": "program",
 				"icon": "bi bi-person-workspace",
-				"data": "/home"
-			},
-			"Consulta Terceros": {
-				"type": "program",
-				"icon": "bi bi-person-vcard",
 				"data": "/home"
 			},
 			"Control usuarios": {
 				"type": "program",
 				"icon": "bi bi-person-gear",
 				"data": "/config/users"
-			}
-        }
-    },
-	"Produccion": {
-		"type": "submenu",
-		"icon": "bi bi-tree-fill",
-		"contract": false,
-		"data": {
-			"Cronograma produccion": {
-				"type": "program",
-				"icon": "bi bi-calendar3",
-				"data": "/produccion/cronograma"
-			},
-			"Hoja de actividades": {
-				"type": "program",
-				"icon": "bi bi-clipboard-data",
-				"data": "/produccion/hojas"
-			}
+			}      
 		}
-	},
-	"Modulo Pedidos": {
-		"type": "program",
-		"icon": "bi bi-list-ol",
-		"data": "/pedidos/control"
-	},
-	"Control Despachos": {
-		"type": "program",
-		"icon": "bi bi-truck-front-fill",
-		"data": "/home"
-	},
-	"CRM Clientes": {
-		"type": "program",
-		"icon": "bi bi-telephone-fill",
-		"data": "/home"
-	},
-	"QRS y garantias": {
-		"type": "program",
-		"icon": "bi bi-pencil-fill",
-		"data": "/home"
-	}
+    }
 }

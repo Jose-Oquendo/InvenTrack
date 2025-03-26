@@ -33,7 +33,7 @@ export const useLoginStore = defineStore('Login', {
         async access() {
             useStore().set_load_bar()
             let requestBody = {
-                identification: String(this.loginData.identification),
+                uuid: String(this.loginData.identification),
                 password: this.loginData.password,
                 _remenber_me: true
             }
@@ -41,6 +41,7 @@ export const useLoginStore = defineStore('Login', {
                 const request = await fetch(`${useStore().App}/api/login`, {
                     method: "POST",
 					mode: "cors",
+                    credentials: 'include',
 					body: JSON.stringify(requestBody),
                     headers: {
                         'Content-Type': 'application/json'
@@ -52,7 +53,9 @@ export const useLoginStore = defineStore('Login', {
                     useStore().set_message(['La contraseña o el usuario no son validos.', 'message'])
                 } else {
                     let time = moment().add(15, 'minutes').format('YYYY-MM-DD H:mm:ss');
-                    await this.attemp(response['token'], this.loginData.identification, time)
+                    await this.attemp(response['session_token'], this.loginData.identification, time)
+                    // await this.attemp('j4bj5b4kjb54k6g547gy6u7ih7658knl7k8m9l', this.loginData.identification, time)
+                    // await this.attemp(response['token'], this.loginData.identification, time)
                 }
             } catch (error) {
                 useStore().set_message(['No se ha podido realizar el login', 'danger'])
@@ -128,7 +131,8 @@ export const useLoginStore = defineStore('Login', {
             }
         },
         async chargePage(){
-            let req = await fetch(`${useStore().baseUrl}/appteco/assets/Portal/api/${JSON.parse(this.user.roles)[0]}.json`, {
+            // let req = await fetch(`${useStore().baseUrl}/InvenTrack/assets/Portal/api/${JSON.parse(this.user.roles)[0]}.json`, {
+            let req = await fetch(`${useStore().baseUrl}/InvenTrack/assets/Portal/api/admin.json`, {
                 method: "GET",
                 mode: "no-cors",
             });

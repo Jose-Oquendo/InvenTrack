@@ -46,7 +46,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->getEntityManager()->flush();
     }
 
-    public function addUser($data) : ?User
+    public function addUser($data): ?User
     {
         $user = new User;
         $user->setName($data->name);
@@ -62,27 +62,26 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     /**
     * @return User[] Returns an array of User objects
     */
-    public function findUsers($data): array
-    {
-            $sql = 'SELECT email, name, roles, identification  FROM public.user 
-                        WHERE (email::TEXT ilike :txt or name::TEXT ilike :txt or identification::TEXT ilike :txt)
-                    order by id ASC';
-            $params = [
-                'txt' => '%'.$data->txt.'%'
-            ];
-            $result = $this->conn->executeQuery($sql, $params);
-            return $result->fetchAllAssociative();
-    }
- 
+   public function findUsers($data): array
+   {
+        $sql = 'SELECT email, name, roles, uuid  FROM user 
+                    WHERE ( CAST(email AS CHAR) LIKE :txt or CAST(name AS CHAR) LIKE :txt or CAST(uuid AS CHAR) LIKE :txt)
+                order by id ASC';
+        $params = [
+            'txt' => '%'.$data->txt.'%'
+        ];
+        $result = $this->conn->executeQuery($sql, $params);
+        return $result->fetchAllAssociative();
+   }
 
-    /**
+     /**
     * @return User[] Returns an array of User objects
     */
     public function getUser($data): array
     {
-         $sql = 'SELECT email, name, roles, identification 
-                    FROM public.user 
-                WHERE identification = :user order by id ASC';
+         $sql = 'SELECT email, name, roles, uuid 
+                    FROM user 
+                WHERE uuid = :user order by id ASC';
          $params = [
             'user' => $data->username
          ];
@@ -95,8 +94,8 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
     */
     public function editUser($data): array
     {
-         $sql = 'UPDATE public.user set email = :email, name = :nam, roles = :rol 
-                WHERE identification = :ide returning *';
+         $sql = 'UPDATE user set email = :email, name = :nam, roles = :rol 
+                WHERE uuid = :ide returning *';
          $params = [
             'email' => $data->email,
             'nam' => $data->name,
@@ -110,6 +109,7 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
          } else {
              return [ ];
          }
+ 
     }
 
 //    /**

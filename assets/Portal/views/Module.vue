@@ -1,5 +1,5 @@
 <template>
-    <object style="width: 100%; height: 100vh;" :data="'https://www.aplicativosbl.com/appbl/test/modules/authsym/modules/'+app+'/dist'">{{ name }}</object>
+    <object style="width: 100%; height: 100vh;" :data="'https://localhost/oquendo/modules/'+app+'/dist'">{{ name }}</object>
 </template>
 <script setup>
     import { ref } from 'vue'

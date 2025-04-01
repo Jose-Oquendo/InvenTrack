@@ -3,8 +3,8 @@
         <div class="area"><Background></Background></div>
         <Loader v-if="view"/>
         <form @submit.prevent="handleLogin()" v-if="!view" class="form-login">
-            <div class="img-login my-3">
-                <!-- <img src="" alt="imagen del aplicativo" height="100" class="d-inline-block align-top"> -->
+            <div class="img-login text-center my-3">
+                <img :src="store.baseUrl + '/assets/Portal/resources/img/invenlogo.png'" alt="imagen del aplicativo" height="100" class="d-inline-block align-top">
                 <div class="h3">BIENVENIDO</div>
             </div>
             <div class="content-login">

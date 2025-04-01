@@ -8,7 +8,7 @@
             </div>
             <form @submit.prevent="handleLogin()" v-if="!view" class="form-login m-3">
                 <div class="img-login my-3">
-                    <img src="" alt="imagen del aplicativo" height="100" class="d-inline-block align-top">
+                    <img :src="store.baseUrl + '/assets/Portal/resources/img/invenlogo.png'" alt="imagen del aplicativo" height="100" class="d-inline-block align-top">
                 </div>
                 <div class="content-login">
                     <div>

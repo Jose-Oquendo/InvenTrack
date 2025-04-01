@@ -1,6 +1,6 @@
 <template lang="">
     <div class="box-load-logo circuit-back">
-        <img src="" alt="Logo empresa" class="load-logo"></img>
+        <img :src="store.baseUrl + '/assets/Portal/resources/img/inventrack.png'" alt="Logo empresa" class="load-logo"></img>
         <!-- <div class="load-logo"></div> -->
     </div> 
 </template>

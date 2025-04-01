@@ -131,8 +131,8 @@ export const useLoginStore = defineStore('Login', {
             }
         },
         async chargePage(){
-            // let req = await fetch(`${useStore().baseUrl}/InvenTrack/assets/Portal/api/${JSON.parse(this.user.roles)[0]}.json`, {
-            let req = await fetch(`${useStore().baseUrl}/InvenTrack/assets/Portal/api/admin.json`, {
+            // let req = await fetch(`${useStore().baseUrl}/assets/Portal/api/${JSON.parse(this.user.roles)[0]}.json`, {
+            let req = await fetch(`${useStore().baseUrl}/assets/Portal/api/admin.json`, {
                 method: "GET",
                 mode: "no-cors",
             });

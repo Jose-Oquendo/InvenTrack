@@ -19,80 +19,52 @@
         align-items: center;
     }
     .loader {
-        width: 48px;
-        height: 48px;
-        display: inline-block;
         position: relative;
-        transform: rotate(45deg);
+        width: 120px;
+        height: 90px;
+        margin: 0 auto;
     }
-    .loader::before {
-        content: '';  
-        box-sizing: border-box;
-        width: 24px;
-        height: 24px;
+    .loader:before {
+        content: "";
         position: absolute;
-        left: 0;
-        top: -24px;
-        animation: animloader 4s ease infinite;
+        bottom: 30px;
+        left: 50px;
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        background: #133d4d;
+        animation: loading-bounce 0.5s ease-in-out infinite alternate;
     }
-    .loader::after {
-        content: '';  
-        box-sizing: border-box;
+    .loader:after {
+        content: "";
         position: absolute;
-        left: 0;
+        right: 0;
         top: 0;
-        width: 24px;
-        height: 24px;
-        background: rgba(255, 255, 255, 0.85);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        animation: animloader2 2s ease infinite;
+        height: 7px;
+        width: 45px;
+        border-radius: 4px;
+        box-shadow: 0 5px 0 #fff, -35px 50px 0 #fff, -70px 95px 0 #fff;
+        animation: loading-step 1s ease-in-out infinite;
     }
-    
-    @keyframes animloader {
-        0% {
-            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
-        }
-        12% {
-            box-shadow: 0 24px white, 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
-        }
-        25% {
-            box-shadow: 0 24px white, 24px 24px white, 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
-        }
-        37% {
-            box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px rgba(255, 255, 255, 0);
-        }
-        50% {
-            box-shadow: 0 24px white, 24px 24px white, 24px 48px white, 0px 48px white;
-        }
-        62% {
-            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px white, 24px 48px white, 0px 48px white;
-        }
-        75% {
-            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px white, 0px 48px white;
-        }
-        87% {
-            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px white;
-        }
-        100% {
-            box-shadow: 0 24px rgba(255, 255, 255, 0), 24px 24px rgba(255, 255, 255, 0), 24px 48px rgba(255, 255, 255, 0), 0px 48px rgba(255, 255, 255, 0);
-        }
-        }
 
-        @keyframes animloader2 {
+    @keyframes loading-bounce {
+        0% { transform: scale(1, 0.7)}
+        40% { transform: scale(0.8, 1.2)}
+        60% { transform: scale(1, 1)}
+        100% { bottom: 140px }
+    }
+    @keyframes loading-step {
         0% {
-            transform: translate(0, 0) rotateX(0) rotateY(0);
-        }
-        25% {
-            transform: translate(100%, 0) rotateX(0) rotateY(180deg);
-        }
-        50% {
-            transform: translate(100%, 100%) rotateX(-180deg) rotateY(180deg);
-        }
-        75% {
-            transform: translate(0, 100%) rotateX(-180deg) rotateY(360deg);
+        box-shadow: 0 10px 0 rgba(0,0,0,0),
+                    0 10px 0 #fff,
+                    -35px 50px 0 #fff,
+                    -70px 90px 0 #fff;
         }
         100% {
-            transform: translate(0, 0) rotateX(0) rotateY(360deg);
+        box-shadow: 0 10px 0 #fff,
+                    -35px 50px 0 #fff,
+                    -70px 90px 0 #fff,
+                    -70px 90px 0 rgba(0,0,0,0);
         }
     }
 </style>

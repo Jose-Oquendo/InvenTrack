@@ -34,7 +34,7 @@
                     <li class="nav-item">
                         <div class="dropdown">
                             <div role="button" class="nav-item user-item dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                                <img src="" alt="Profile_usuario">
+                                <img :src="store.baseUrl + '/assets/Portal/resources/img/user.png'" alt="Profile_usuario">
                             </div>
                             <ul class="dropdown-menu">
                                 <li><div class="dropdown-header"><i class="bi bi-person-circle"></i> {{login.getUser.email}}</div></li>

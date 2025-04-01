@@ -170,7 +170,7 @@ header .navbar .top-menu .navbar-nav .dropdown-menu {
     position: relative;
 	min-height: 6em;
     width: 20%;
-	min-width: 250px;
+	min-width: 280px;
     transition: all 0.3s ease;
 	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
@@ -180,7 +180,7 @@ header .navbar .top-menu .navbar-nav .dropdown-menu {
 }
 .brand a{
 	z-index: 1;
-	left: 50px;
+	left: 1em;
 }
 .brand.close a {
 	left: 90px;

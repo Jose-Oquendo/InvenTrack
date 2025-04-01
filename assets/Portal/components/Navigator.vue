@@ -3,7 +3,7 @@
         <nav class="top-nav navbar navbar-dark shadow">
             <div class="brand" :class="store.menu ? 'open' : 'close'">
                 <a class="navbar-brand" href="#">
-                    <img src="" alt="" height="50" class="d-inline-block align-top">
+                    <img :src="store.baseUrl + '/assets/Portal/resources/img/inventrack.png'" alt="" height="40" width="200" class="d-inline-block align-top">
                 </a>
                 <span class="menu-icon" :class="store.menu ? 'open' : 'close'" @click="store.menu = !store.menu">
                     <div class="bar"></div>
@@ -18,7 +18,7 @@
                     <li class="nav-item">
                         <div class="dropdown">
                             <div role="button" class="nav-item user-item dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                                <img src="" alt="Profile_usuario">
+                                <img :src="store.baseUrl + '/assets/Portal/resources/img/user.png'" alt="Profile_usuario">
                             </div>
                             <ul class="dropdown-menu">
                                 <li><div class="dropdown-header"><i class="bi bi-person-circle"></i> {{login.getUser.email}}</div></li>

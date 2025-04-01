@@ -7,7 +7,7 @@
         <section>
             <div class="profile-home">
                 <div class="photo">
-                    <img src="" alt="Usuario">
+                    <img :src="store.baseUrl + '/assets/Portal/resources/img/user.png'" alt="Usuario">
                 </div>
                 <div class="description"></div>
             </div>

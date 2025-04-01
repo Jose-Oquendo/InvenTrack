@@ -13,14 +13,14 @@ import App from './App.vue';
 
 const app = createApp(App).use(createPinia()).use(router).mount('#app')
 
-import { useLoginStore } from './store/controllers/Login';
-router.beforeEach((to, from, next) => {
-    if ((to.name !== 'Login' && to.name !== 'Pass') && !useLoginStore().isAuhthenticated){
-        next({ name: 'Login' })
-        console.log('login');
-        useLoginStore().eraseSession();
-    } else {
-        console.log('continue');
-        next()
-    }
-})
+// import { useLoginStore } from './store/controllers/Login';
+// router.beforeEach((to, from, next) => {
+//     if ((to.name !== 'Login' && to.name !== 'Pass') && !useLoginStore().isAuhthenticated){
+//         next({ name: 'Login' })
+//         console.log('login');
+//         useLoginStore().eraseSession();
+//     } else {
+//         console.log('continue');
+//         next()
+//     }
+// })

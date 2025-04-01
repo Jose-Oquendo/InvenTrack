@@ -6,6 +6,7 @@ import moment from "moment";
 // const route = useRouter()
 const hoy = moment().format("YYYY-MM-DD");
 
+// ; 3202750429
 export const useStore = defineStore('Store', {
     state: () => ({
         baseApp: 'http://localhost',

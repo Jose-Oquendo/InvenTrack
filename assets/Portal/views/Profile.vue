@@ -2,7 +2,7 @@
     <main class="mycontainer">
         <div class="user-profile">
             <div class="photo">
-                <img src="" alt="Usuario">
+                <img :src="store.baseUrl + '/assets/Portal/resources/img/user.png'" alt="Usuario">
             </div>
             <div class="details">
                 <ul class="list-info">
